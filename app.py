@@ -17,6 +17,16 @@ def get_hannah_data():
     })
     return jsonify(InfoDb)
 
+@app.route('/api/carson')
+def get_carson_data():
+    InfoDb = []
+    InfoDb.append({
+        "FirstName": "Pubert",
+        "LastName": "McLice",
+        "Username": "Puberslice$"
+    })
+    return jsonify(InfoDb)
+
 @app.route('/api/rhea')
 def get_rhea_data():
     InfoDb = []
