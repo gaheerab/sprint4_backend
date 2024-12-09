@@ -31,9 +31,6 @@ def get_gaheera_data():
     # Return the list as JSON response
     return jsonify(InfoDb)
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
 # add an api endpoint to flask app
 @app.route('/api/carson')
 def get_carson_data():
