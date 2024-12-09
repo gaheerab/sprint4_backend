@@ -51,6 +51,7 @@ def get_rhea_data():
         "LastName": "gross",
         "Username": "bgross$"
     })
+    return jsonify(InfoDb)
     # add an api endpoint to flask app
 @app.route('/api/Brandon')
 def get_brandon_data():
