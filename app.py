@@ -16,10 +16,7 @@ def get_hannah_data():
         "Username": "Hannahli_11"
     })
 
-# add an api endpoint to flask app    
-app = Flask(__name__)
-
-@app.route('/api/gaheera', methods=['GET'])
+@app.route('/api/gaheera')
 def get_gaheera_data():
     # Create a list to act as a database
     InfoDb = []
