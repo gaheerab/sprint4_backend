@@ -1,20 +1,15 @@
-
-from flask import Flask 
-from flask import jsonify 
+from flask import Flask
+from flask import jsonify
 from flask_cors import CORS
 
 # initialize a flask application (app)
 app = Flask(__name__)
 CORS(app, supports_credentials=True, origins='*')  # Allow all origins (*)
-# ... your existing Flask
 
 # add an api endpoint to flask app
 @app.route('/api/hannah')
-def get_data():
-    # start a list, to be used like a information database
+def get_hannah_data():
     InfoDb = []
-
-    # add a row to list, an Info record
     InfoDb.append({
         "FirstName": "Ben",
         "LastName": "Dovers",
@@ -44,53 +39,51 @@ if __name__ == '__main__':
 
 # add an api endpoint to flask app
 @app.route('/api/rhea')
-def get_data():
+def get_rhea_data():
     # start a list, to be used like a information database
     InfoDb = []
-
-    # add a row to list, an Info record
     InfoDb.append({
         "FirstName": "bob",
         "LastName": "gross",
         "Username": "bgross$"
-
-    # add a row to list, an Info record
-    InfoDb.append({
-        "FirstName": "As.",
-        "LastName": "Scrum",
-        "DOB": "February 30",
     })
-    
-    return jsonify(InfoDb)
-
-
-@app.route('/api/rowan')
-def get_data():
+    # add an api endpoint to flask app
+@app.route('/api/Brandon')
+def get_brandon_data():
     # start a list, to be used like a information database
     InfoDb = []
 
     # add a row to list, an Info record
+    InfoDb.append({
+        "FirstName": "Brandon",
+        "LastName": "Smurlo",
+        "Username": "bsmurlo"
+    })
+    return jsonify(InfoDb)
+
+@app.route('/api/rowan')
+def get_rowan_data():
+    # start a list, to be used like a information database
+    InfoDb = []
     InfoDb.append({
         "FirstName": "Gabe",
         "LastName": "Smith",
         "Username": "GabeS55"
     })
-
-    # add a row to list, an Info record
     InfoDb.append({
         "FirstName": "Best",
         "LastName": "Friend",
         "DOB": "February 24",
     })
-    
     return jsonify(InfoDb)
+
 # add an HTML endpoint to flask app
 @app.route('/')
 def say_hello():
     html_content = """
     <html>
     <head>
-        <title>Hellox</title>
+        <title>Hello</title>
     </head>
     <body>
         <h2>Hello, World!</h2>
@@ -102,6 +95,3 @@ def say_hello():
 if __name__ == '__main__':
     # starts flask server on default port, http://127.0.0.1:5001
     app.run(port=5001)
-
-    
-    
