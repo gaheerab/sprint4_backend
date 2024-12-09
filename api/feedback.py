@@ -1,5 +1,5 @@
 import jwt
-from server import Blueprint, request, jsonify, current_app, Response, g
+from app import Blueprint, request, jsonify, current_app, Response, g
 from flask_restful import Api, Resource  # used for REST API building
 from datetime import datetime
 from __init__ import app
