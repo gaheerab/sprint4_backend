@@ -20,6 +20,18 @@ def get_data():
         "LastName": "Dovers",
         "Username": "Dendover$"
     })
+    
+# add an api endpoint to flask app
+@app.route('/api/rhea')
+def get_data():
+    # start a list, to be used like a information database
+    InfoDb = []
+
+    # add a row to list, an Info record
+    InfoDb.append({
+        "FirstName": "bob",
+        "LastName": "gross",
+        "Username": "bgross$"
 
     # add a row to list, an Info record
     InfoDb.append({
