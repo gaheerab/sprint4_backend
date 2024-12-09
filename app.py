@@ -30,6 +30,27 @@ def get_data():
     
     return jsonify(InfoDb)
 
+
+@app.route('/api/rowan')
+def get_data():
+    # start a list, to be used like a information database
+    InfoDb = []
+
+    # add a row to list, an Info record
+    InfoDb.append({
+        "FirstName": "Gabe",
+        "LastName": "Itch",
+        "Username": "GabeI55"
+    })
+
+    # add a row to list, an Info record
+    InfoDb.append({
+        "FirstName": "Best",
+        "LastName": "Friend",
+        "DOB": "February 24",
+    })
+    
+    return jsonify(InfoDb)
 # add an HTML endpoint to flask app
 @app.route('/')
 def say_hello():
