@@ -1,5 +1,5 @@
 # by P5 G1
-from flask import Blueprint, request, jsonify
+from server import Blueprint, request, jsonify
 from flask_restful import Api, Resource
 import requests
 import json

@@ -1,4 +1,4 @@
-from flask import Blueprint, g, request
+from server import Blueprint, g, request
 from flask_restful import Api, Resource
 from api.jwt_authorize import token_required
 from model.user import User

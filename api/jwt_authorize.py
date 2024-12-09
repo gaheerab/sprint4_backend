@@ -1,5 +1,5 @@
-from flask import request
-from flask import current_app, g
+from server import request
+from server import current_app, g
 from functools import wraps
 import jwt
 from model.user import User
