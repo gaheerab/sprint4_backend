@@ -16,18 +16,12 @@ def get_data():
 
     # add a row to list, an Info record
     InfoDb.append({
-        "FirstName": "Ben",
-        "LastName": "Dovers",
-        "Username": "Dendover$"
+        "FirstName": "Hannah",
+        "LastName": "Li",
+        "Username": "Hannahli_11"
     })
 
-    # add a row to list, an Info record
-    InfoDb.append({
-        "FirstName": "As.",
-        "LastName": "Scrum",
-        "DOB": "February 30",
-    })
-    
+
     return jsonify(InfoDb)
 
 # add an HTML endpoint to flask app
