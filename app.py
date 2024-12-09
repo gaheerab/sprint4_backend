@@ -20,7 +20,28 @@ def get_data():
         "LastName": "Dovers",
         "Username": "Dendover$"
     })
-    
+
+# add an api endpoint to flask app    
+app = Flask(__name__)
+
+@app.route('/api/gaheera', methods=['GET'])
+def get_gaheera_data():
+    # Create a list to act as a database
+    InfoDb = []
+
+    # Add a row to the list (an Info record)
+    InfoDb.append({
+        "FirstName": "Gaheera",
+        "LastName": "Babbar",
+        "Username": "Gaheera123"
+    })
+
+    # Return the list as JSON response
+    return jsonify(InfoDb)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 # add an api endpoint to flask app
 @app.route('/api/rhea')
 def get_data():
@@ -51,8 +72,8 @@ def get_data():
     # add a row to list, an Info record
     InfoDb.append({
         "FirstName": "Gabe",
-        "LastName": "Itch",
-        "Username": "GabeI55"
+        "LastName": "Smith",
+        "Username": "GabeS55"
     })
 
     # add a row to list, an Info record
