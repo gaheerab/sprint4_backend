@@ -1,5 +1,5 @@
-from server import request
-from server import current_app, g
+from app import request
+from app import current_app, g
 from functools import wraps
 import jwt
 from model.user import User

@@ -2,11 +2,11 @@
 import json
 import os
 from urllib.parse import urljoin, urlparse
-from server import abort, redirect, render_template, request, send_from_directory, url_for, jsonify  # import render_template from "public" flask libraries
+from app import abort, redirect, render_template, request, send_from_directory, url_for, jsonify  # import render_template from "public" flask libraries
 from flask_login import current_user, login_user, logout_user
 from flask.cli import AppGroup
 from flask_login import current_user, login_required
-from server import current_app
+from app import current_app
 from werkzeug.security import generate_password_hash
 import shutil
 
@@ -230,3 +230,4 @@ app.cli.add_command(custom_cli)
 if __name__ == "__main__":
     # change name for testing
     app.run(debug=True, host="0.0.0.0", port="8887")
+ 

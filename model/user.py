@@ -1,5 +1,5 @@
 # user.py
-from server import current_app
+from app import current_app
 from flask_login import UserMixin
 from datetime import date
 from sqlalchemy.exc import IntegrityError
