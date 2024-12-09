@@ -23,7 +23,7 @@ def get_data():
     
 # add an api endpoint to flask app
 @app.route('/api/rhea')
-def get_data():
+def get_rhea_data():
     # start a list, to be used like a information database
     InfoDb = []
 
@@ -32,19 +32,25 @@ def get_data():
         "FirstName": "bob",
         "LastName": "gross",
         "Username": "bgross$"
+    })
+    # add an api endpoint to flask app
+@app.route('/api/Brandon')
+def get_brandon_data():
+    # start a list, to be used like a information database
+    InfoDb = []
 
     # add a row to list, an Info record
     InfoDb.append({
-        "FirstName": "As.",
-        "LastName": "Scrum",
-        "DOB": "February 30",
+        "FirstName": "Brandon",
+        "LastName": "Smurlo",
+        "Username": "bsmurlo"
     })
     
     return jsonify(InfoDb)
 
 
 @app.route('/api/rowan')
-def get_data():
+def get_rowan_data():
     # start a list, to be used like a information database
     InfoDb = []
 
