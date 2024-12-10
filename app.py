@@ -36,9 +36,9 @@ def get_gaheera_data():
 def get_carson_data():
     InfoDb = []
     InfoDb.append({
-        "FirstName": "Pubert",
-        "LastName": "McLice",
-        "Username": "Puberslice$"
+        "FirstName": "Carson",
+        "LastName": "Sutherland",
+        "Username": "CJSuth$"
     })
     return jsonify(InfoDb)
 
@@ -70,15 +70,11 @@ def get_rowan_data():
     # start a list, to be used like a information database
     InfoDb = []
     InfoDb.append({
-        "FirstName": "Gabe",
-        "LastName": "Smith",
-        "Username": "GabeS55"
+        "FirstName": "Rowan",
+        "LastName": "Sutherland",
+        "Username": "rowangs.1"
     })
-    InfoDb.append({
-        "FirstName": "Best",
-        "LastName": "Friend",
-        "DOB": "February 24",
-    })
+
     return jsonify(InfoDb)
 
 # add an HTML endpoint to flask app
